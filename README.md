@@ -31,8 +31,11 @@ print(loss_val)
 ```
 
 ## How it works
-$$ \mathcal L = \lambda\frac{\sum^N_{i=1}||z_i||_*}{N} - ||C||_*$$
-Where $\lambda$ is a trade-off parameter, $||z_i||_*$ is local nuclear norm of the $i$-th sample's augmented matrix, and $||C||_*$ is the global nuclear norm of centroid matrix $C$.
+```math
+\mathcal{L} = \lambda\frac{\sum^{N}_{i=1}\lVert z_{i} \rVert_{*}}{N} - \lVert C\rVert_{*}
+```
+
+Where $\lambda$ is a trade-off parameter, $`\lVert z_i\rVert_*`$ is local nuclear norm of the $i$-th sample's augmented matrix, and $`\lVert C\rVert_*`$ is the global nuclear norm of centroid matrix $C$.
 
 ### Arguments
 - `lmbda`: Trade-off parameter $\lambda$. default is 0.
